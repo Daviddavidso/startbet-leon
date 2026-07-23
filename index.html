@@ -49,7 +49,7 @@ svg{display:block}
 .s{padding:3.4rem 0}
 .s.alt{background:var(--alt)}
 .eyebrow{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);text-align:center;margin-bottom:.7rem}
-.h2{font-size:1.75rem;font-weight:700;letter-spacing:-.028em;line-height:1.1;text-align:center}
+.h2{font-size:clamp(1.7rem,5.2vw,2.5rem);font-weight:700;letter-spacing:-.028em;line-height:1.1;text-align:center}
 .lede{font-size:1rem;color:var(--ink-2);text-align:center;max-width:26rem;margin:.55rem auto 0;line-height:1.5}
 
 /* ===== Buttons (flat black pill, content width) ===== */
@@ -69,9 +69,9 @@ svg{display:block}
 .hero-logo{display:flex;justify-content:center;margin-bottom:1.5rem}
 .hero-logo img{height:26px;width:auto}
 .hero .eyebrow{margin-bottom:1rem}
-.hero-title{font-size:2.9rem;font-weight:800;letter-spacing:-.04em;line-height:1.02}
+.hero-title{font-size:clamp(2.6rem,9vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:1.02}
 .hero-title .amt{color:var(--accent)}
-.hero-sub{font-size:1.12rem;color:var(--ink-2);max-width:22rem;margin:1rem auto 0;line-height:1.42}
+.hero-sub{font-size:clamp(1.08rem,3.6vw,1.35rem);color:var(--ink-2);max-width:24rem;margin:1rem auto 0;line-height:1.42}
 .hero-sub b{color:var(--ink)}
 .trust{display:flex;flex-wrap:wrap;gap:.5rem 1rem;justify-content:center;margin-top:1.4rem;font-size:.82rem;color:var(--ink-2)}
 .trust span{display:inline-flex;align-items:center;gap:.32rem}
@@ -115,7 +115,7 @@ svg{display:block}
 
 /* ===== AI ===== */
 .ai{text-align:center;max-width:26rem;margin:0 auto}
-.ai .stat{font-size:4rem;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--accent)}
+.ai .stat{font-size:clamp(3.6rem,13vw,6rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--accent)}
 .ai .stat-lbl{font-size:.95rem;color:var(--ink-2);margin-top:.35rem}
 .ai h2{font-size:1.5rem;font-weight:700;letter-spacing:-.025em;margin-top:1.8rem}
 .ai p{font-size:1rem;color:var(--ink-2);margin-top:.5rem;line-height:1.5}
@@ -132,7 +132,7 @@ svg{display:block}
 
 /* ===== Final ===== */
 .final{text-align:center}
-.final h2{font-size:2.1rem;font-weight:800;letter-spacing:-.035em;line-height:1.05}
+.final h2{font-size:clamp(2.1rem,7vw,3.2rem);font-weight:800;letter-spacing:-.035em;line-height:1.05}
 .final p{font-size:1.05rem;color:var(--ink-2);margin-top:.6rem}
 
 /* ===== Footer ===== */
@@ -147,7 +147,23 @@ svg{display:block}
 .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
 .js .reveal.is-visible{opacity:1;transform:none}
 
-@media (min-width:560px){.hero-title{font-size:3.4rem}}
+@media (min-width:768px){
+  :root{--wrap:60rem;--pad:2rem}
+  .s{padding:5.5rem 0}
+  .hero{padding-top:4.5rem}
+  .hero-logo img{height:30px}
+  .hero .eyebrow{margin-bottom:1.2rem}
+  .lede{font-size:1.15rem}
+  .steps{max-width:58rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0 2rem;overflow:visible}
+  .steps li,.steps li:first-child{flex-direction:column;gap:.3rem;border-top:2px solid var(--ink);padding:1.15rem 0 0;overflow:visible}
+  .steps .n{width:auto;font-size:1.7rem;margin-bottom:.25rem}
+  .feature{max-width:40rem}
+  .feature h2{font-size:2.1rem}
+  .card{max-width:34rem}
+  .faq{max-width:46rem}
+  .ai{max-width:34rem}
+  .final h2{font-size:clamp(2.6rem,5vw,3.6rem)}
+}
 @media (prefers-reduced-motion:reduce){
   .js .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
@@ -192,11 +208,11 @@ svg{display:block}
     <div class="wrap">
       <p class="eyebrow reveal">Как получить</p>
       <h2 class="h2 reveal" id="steps-h">Четыре шага до фрибета</h2>
-      <ol class="steps reveal">
-        <li><span class="n">1</span><div><h3>Регистрация</h3><p>Зарегистрируйтесь в БК Леон по акционной ссылке и откройте «Приветственный бонус».</p></div></li>
-        <li><span class="n">2</span><div><h3>Участие</h3><p>Нажмите «Принять участие» в акции — займёт пару секунд.</p></div></li>
-        <li><span class="n">3</span><div><h3>Депозит</h3><p>Пополните счёт от 500 ₽. Для фрибета — депозит <span class="hot">от 2 000 ₽</span>.</p></div></li>
-        <li><span class="n">4</span><div><h3>Первая ставка</h3><p>Поставьте <span class="hot">от 2 000 ₽</span> в течение 7 дней после регистрации — и заберите фрибет.</p></div></li>
+      <ol class="steps reveal" role="list">
+        <li><span class="n" aria-hidden="true">1</span><div><h3>Регистрация</h3><p>Зарегистрируйтесь в БК Леон по акционной ссылке и откройте «Приветственный бонус».</p></div></li>
+        <li><span class="n" aria-hidden="true">2</span><div><h3>Участие</h3><p>Нажмите «Принять участие» в акции — займёт пару секунд.</p></div></li>
+        <li><span class="n" aria-hidden="true">3</span><div><h3>Депозит</h3><p>Пополните счёт от 500 ₽. Для фрибета — депозит <span class="hot">от 2 000 ₽</span>.</p></div></li>
+        <li><span class="n" aria-hidden="true">4</span><div><h3>Первая ставка</h3><p>Поставьте <span class="hot">от 2 000 ₽</span> в течение 7 дней после регистрации — и заберите фрибет.</p></div></li>
       </ol>
     </div>
   </section>
@@ -280,7 +296,7 @@ svg{display:block}
   <!-- FINAL -->
   <section class="s alt final" aria-labelledby="final-h">
     <div class="wrap">
-      <h2 class="h2 final reveal" id="final-h" style="font-size:2.1rem;font-weight:800;letter-spacing:-.035em">Заберите свои 2&#8239;000&nbsp;₽</h2>
+      <h2 class="h2 reveal" id="final-h">Заберите свои 2&#8239;000&nbsp;₽</h2>
       <p class="lede reveal">Регистрация занимает пару минут.</p>
       <div class="cta-wrap reveal">
         <a class="cta" href="https://betsxwin.pro/click?o=227&a=50603&link_id=1376&sub_id1=4721&sub_id2=7&sub_id3=sms" target="_blank" rel="sponsored noopener nofollow" aria-label="Забрать фрибет 2 000 ₽ в БК Леон — финальная кнопка (откроется в новой вкладке)">
