@@ -41,14 +41,14 @@ svg{display:block}
 .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
 .header .wrap{display:flex;align-items:center;height:var(--header-h)}
 .brand{font-weight:700;font-size:1rem;letter-spacing:-.02em}
-.brand span{color:var(--ink-3)}
+.brand span{color:var(--ink-2)}
 .tag18{margin-left:auto;font-size:.72rem;font-weight:600;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem}
 
 /* ===== Section shell ===== */
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
 .s{padding:3.4rem 0}
 .s.alt{background:var(--alt)}
-.eyebrow{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);text-align:center;margin-bottom:.7rem}
+.eyebrow{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-2);text-align:center;margin-bottom:.7rem}
 .h2{font-size:clamp(1.7rem,5.2vw,2.5rem);font-weight:700;letter-spacing:-.028em;line-height:1.1;text-align:center}
 .lede{font-size:1rem;color:var(--ink-2);text-align:center;max-width:26rem;margin:.55rem auto 0;line-height:1.5}
 
@@ -60,9 +60,9 @@ svg{display:block}
 .cta:hover{opacity:.86}
 .cta:active{transform:scale(.98)}
 .cta .arr{width:1rem;height:1rem;flex-shrink:0}
-.cta.light{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.cta.light{background:#fff;color:var(--ink);border:1px solid #b0b0b6}
 .cta.light:hover{background:var(--alt);opacity:1}
-.undernote{font-size:.8rem;color:var(--ink-3);text-align:center;margin-top:.85rem}
+.undernote{font-size:.8rem;color:var(--ink-2);text-align:center;margin-top:.85rem}
 
 /* ===== Hero ===== */
 .hero{padding-top:2.6rem;text-align:center}
@@ -111,7 +111,7 @@ svg{display:block}
 .calc .k{font-size:.98rem;color:var(--ink-2)}
 .calc .v{font-size:1.15rem;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .calc li.total .v{color:var(--accent)}
-.calc-note{font-size:.86rem;color:var(--ink-3);margin-top:1rem;text-align:center;line-height:1.5}
+.calc-note{font-size:.86rem;color:var(--ink-2);margin-top:1rem;text-align:center;line-height:1.5}
 
 /* ===== AI ===== */
 .ai{text-align:center;max-width:26rem;margin:0 auto}
@@ -139,7 +139,7 @@ svg{display:block}
 .footer{border-top:1px solid var(--line);padding:2rem 0 2.6rem;text-align:center}
 .footer .rg{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:600;color:var(--ink-2);margin-bottom:.6rem}
 .footer .rg svg{width:.95rem;height:.95rem}
-.footer p{font-size:.82rem;color:var(--ink-3);line-height:1.5}
+.footer p{font-size:.82rem;color:var(--ink-2);line-height:1.5}
 .footer .disc{font-size:.74rem;margin-top:.55rem;max-width:26rem;margin-left:auto;margin-right:auto}
 
 /* ===== Reveal ===== */
@@ -174,14 +174,14 @@ svg{display:block}
 </style>
 </head>
 <body>
-<main>
-
   <header class="header">
     <div class="wrap">
       <span class="brand">Start-Bet<span>.ru</span></span>
       <span class="tag18">18+</span>
     </div>
   </header>
+
+  <main>
 
   <!-- HERO -->
   <section class="s hero">
@@ -269,7 +269,7 @@ svg{display:block}
         <h2 id="ai-h">Не знаете, куда поставить?</h2>
         <p>Бесплатный AI-аналитик обрабатывает более 1 000 показателей статистики и данные со всего интернета — то, что человеку не под силу.</p>
         <div class="cta-wrap">
-          <a class="cta light" href="https://betsxwin.pro/click?o=227&a=50603&link_id=1376&sub_id1=4721&sub_id2=7&sub_id3=sms" target="_blank" rel="sponsored noopener nofollow" aria-label="Получить AI-прогноз в БК Леон (откроется в новой вкладке)">
+          <a class="cta light" href="https://betsxwin.pro/click?o=227&a=50603&link_id=1376&sub_id1=4721&sub_id2=7&sub_id3=sms" target="_blank" rel="sponsored noopener nofollow" aria-label="Получить прогноз в БК Леон (откроется в новой вкладке)">
             Получить прогноз
             <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
@@ -308,6 +308,8 @@ svg{display:block}
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="wrap">
       <span class="rg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>18+ · Играйте ответственно</span>
@@ -315,8 +317,6 @@ svg{display:block}
       <p class="disc">Материал носит информационный характер. Азартные игры могут вызывать зависимость — оценивайте риски и не ставьте больше, чем готовы потерять.</p>
     </div>
   </footer>
-
-</main>
 
 <script>
 (function(){
